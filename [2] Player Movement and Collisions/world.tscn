@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://ddgng0gd6b37"]
+
+[ext_resource type="Texture2D" uid="uid://dad8isst24usc" path="res://icon.svg" id="1_f3sb7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_fj7yv"]
+sky_material = SubResource("ProceduralSkyMaterial_f3sb7")
+
+[sub_resource type="Environment" id="Environment_tlwt5"]
+background_mode = 2
+sky = SubResource("Sky_fj7yv")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
+albedo_texture = ExtResource("1_f3sb7")
+uv1_scale = Vector3(13.08, 13.08, 13.08)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gv5m4"]
+size = Vector2(12.85, 27.62)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tlwt5"]
+size = Vector3(4.97, 3.755, 8.9)
+
+[sub_resource type="SphereMesh" id="SphereMesh_aqk2v"]
+radius = 1.275
+height = 1.775
+
+[node name="Node" type="Node" unique_id=1487631201]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=618395133]
+environment = SubResource("Environment_tlwt5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1191788011]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.76966125, 0.74989974, 0.738933, 1)
+shadow_enabled = true
+
+[node name="Node3D" type="Node3D" parent="." unique_id=2014204459]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1405687351]
+material_override = SubResource("StandardMaterial3D_fj7yv")
+mesh = SubResource("PlaneMesh_gv5m4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=1247221491]
+transform = Transform3D(0.6723433, -0.40100387, 0.6222141, 0.5122378, 0.8588437, 0, -0.5343846, 0.31872156, 0.7828471, 0, -0.29485917, -6.948838)
+mesh = SubResource("BoxMesh_tlwt5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=1027968726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0917485, -0.26351953, 1.149087)
+mesh = SubResource("SphereMesh_aqk2v")
