@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cbdw7cq1hwbki"]
+
+[ext_resource type="Script" uid="uid://taoton02iy3r" path="res://Scenes/camera.gd" id="1_375tr"]
+
+[node name="Camera" type="Node3D" unique_id=1792913788]
+script = ExtResource("1_375tr")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=225658807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.475, 0)
+spring_length = 2.47
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1553895423]
