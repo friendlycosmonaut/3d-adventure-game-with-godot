@@ -14,11 +14,11 @@ dmochas (via Itch.io)
 - [License](https://creativecommons.org/licenses/by/4.0/)
 ### Icons
 Lorc, Delapouite & Contributors (via game-icons.net)
-- [Source](https://https://game-icons.net/)
+- [Source](https://game-icons.net/)
 - [License](https://creativecommons.org/licenses/by/3.0/)
 ### Retro Textures 1
 Kenney
-- [Source](https://kenney.nl/assets/retro-textures-1)
+- [Source](https://kenney.nl/assets/retro-textures-fantasy)
 - [License](https://creativecommons.org/publicdomain/zero/1.0/)
 ### Schoolbell 
 Font Diner (via Google Fonts)
